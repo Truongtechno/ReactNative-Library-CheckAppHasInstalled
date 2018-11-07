@@ -1,17 +1,13 @@
-#import <React/RCTBridgeModule.h>
 
+#import "RNCheckAppHasInstalled.h"
 
-@interface RCT_EXTERN_MODULE(CopyFileToCloud, NSObject)
+@implementation RNCheckAppHasInstalled
 
-RCT_EXTERN_METHOD(copyFileToCloud:(NSString *) file fileName: (NSString *) fileName callback: (RCTResponseSenderBlock) callback)
-
-@end
-
-
-@interface RCT_EXTERN_MODULE(OpenWithMSWord, NSObject)
-
-RCT_EXTERN_METHOD(openWithMSWord:(NSString *) file)
+- (dispatch_queue_t)methodQueue
+{
+    return dispatch_get_main_queue();
+}
+RCT_EXPORT_MODULE()
 
 @end
-
 
